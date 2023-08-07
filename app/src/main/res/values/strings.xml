@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ITI_Project</string>
+
+    <string name="football">Football</string>
+    <string name="basketball">Basketball</string>
+    <string name="volleyball">Volleyball</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="login">Login</string>
+    <string name="loginwith">Login With</string>
+
+</resources>

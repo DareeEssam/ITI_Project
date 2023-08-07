@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gender_rg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/login"
+
+         />
+
+    <Button
+        android:id="@+id/dialoge_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/login_bt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Show dialoge"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="UserName"
+        />
+
+    <TextView
+        android:id="@+id/email_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Email"
+        android:layout_marginStart="50dp"
+        app:layout_constraintTop_toBottomOf="@id/username_tv"
+        tools:layout_editor_absoluteX="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/password_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:text="Password"
+        app:layout_constraintTop_toBottomOf="@id/email_tv"
+        tools:layout_editor_absoluteX="20dp"
+        />
+
+
+    <EditText
+        android:id="@+id/username_et"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/username_tv"
+        app:layout_constraintTop_toTopOf="@id/username_tv"
+        app:layout_constraintBottom_toBottomOf="@id/username_tv"
+        android:hint="Enter your name"
+
+
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/email_tv"
+        app:layout_constraintTop_toTopOf="@id/email_tv"
+        app:layout_constraintBottom_toBottomOf="@id/email_tv"
+        android:hint="Enter your email"
+        android:layout_marginStart="20dp"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/password_tv"
+        app:layout_constraintTop_toTopOf="@id/password_tv"
+        app:layout_constraintBottom_toBottomOf="@id/password_tv"
+        android:hint="Enter password"
+        android:layout_marginStart="20dp"
+        />
+
+    <CheckBox
+        android:id="@+id/football_ck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/password_tv"
+        app:layout_constraintStart_toStartOf="@id/password_tv"
+        android:text="@string/football"
+        />
+
+    <CheckBox
+        android:id="@+id/basketball_ck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/football_ck"
+        app:layout_constraintStart_toStartOf="@id/football_ck"
+        android:text="@string/basketball"
+        />
+
+    <CheckBox
+        android:id="@+id/volleyball_ck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/basketball_ck"
+        app:layout_constraintStart_toStartOf="@id/basketball_ck"
+        android:text="@string/volleyball"
+        />
+
+    <RadioGroup
+        android:id="@+id/gender_rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/volleyball_ck"
+        app:layout_constraintStart_toStartOf="@id/volleyball_ck"
+        />
+
+        <RadioButton
+            android:id="@+id/male_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/volleyball_ck"
+            android:layout_marginStart="20dp"
+            android:text="@string/male"
+            />
+
+        <RadioButton
+            android:id="@+id/female_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            app:layout_constraintTop_toBottomOf="@id/volleyball_ck"
+            app:layout_constraintStart_toEndOf="@id/male_rb"
+            android:layout_marginStart="50dp"
+            />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
