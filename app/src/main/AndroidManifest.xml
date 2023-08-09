@@ -11,18 +11,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ITI_Project"
         tools:targetApi="31">
-    <activity android:name="com.example.iti_project.MainActivity"
-        android:exported="true">
 
+    <activity android:name="MainActivity"
+        android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
     </activity>
 
-    <activity android:name="com.example.iti_project.SecondActivity"
+    <activity android:name="SecondActivity"
         android:exported="true"/>
 
+     <activity android:name="Posts"
+         android:exported="true"/>
+
+        <activity android:name="CustomAdapter"
+            android:exported="true"/>
+
+        <activity android:name="ThirdActivity"
+            android:exported="true"/>
     </application>
 
 

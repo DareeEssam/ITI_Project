@@ -1,27 +1,34 @@
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.iti_project.CustomAdapter
+import com.example.iti_project.Posts
 import com.example.iti_project.databinding.SecondActivityBinding
-import com.example.iti_project.SecondActivity
-
-
-
-
-
 
 class SecondActivity : AppCompatActivity() {
 
     lateinit var binding: SecondActivityBinding
+    lateinit var postsAdapter: CustomAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = SecondActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val username = intent.getStringExtra("USERNAME_KEY")
-        val sports = intent.getStringExtra("SPORTS_KEY")
-        val gender = intent.getStringExtra("GENDER_KEY")
-        val message = "Welcome $username! you like $sports and you are $gender"
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        val postsList = posts()
+        postsAdapter = CustomAdapter(postsList)
+        binding.recyclerView.adapter = postsAdapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+    }
+
+    fun posts(): List<Posts> {
+        return listOf(
+            Posts("Title 1", "Dareen Essam", "7/8/2023", "This is my first post here"),
+            Posts("Title 2", "Nada Ahmed", "7/8/2023", "Hello Every One"),
+
+        )
     }
 }
+
+

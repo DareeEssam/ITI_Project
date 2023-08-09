@@ -8,5 +8,6 @@
     <string name="female">Female</string>
     <string name="login">Login</string>
     <string name="loginwith">Login With</string>
+    <string name="post_details">Post Details</string>
 
 </resources>
