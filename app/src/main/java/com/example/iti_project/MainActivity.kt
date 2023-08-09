@@ -1,10 +1,12 @@
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.iti_project.R
 import com.example.iti_project.databinding.ActivityMainBinding
@@ -12,13 +14,33 @@ import com.example.iti_project.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
+    lateinit var SharedPref: SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        SharedPref= applicationContext.getSharedPreferences("UserPref", MODE_PRIVATE)
+
+        binding.usernameEt.setText(SharedPref.getString("USERNAME",""))
+        binding.passwordEt.setText(SharedPref.getString("PASSWORD",""))
+
+
+
         binding.loginBt.setOnClickListener {
+
+            val editor = SharedPref.edit()
+
+            editor.putString("USERNAME ${binding.usernameEt.text.toString()}" ,binding.usernameEt.text.toString())
+            editor.putString("PASSWORD ${binding.usernameEt.text.toString()}",binding.passwordEt.text.toString())
+            editor.putBoolean("LOGIN",true)
+            editor.commit()
+
+
+
             val username = binding.usernameEt.text.toString()
 
             var sports = ""
