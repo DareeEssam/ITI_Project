@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:text="Dareen Essam"
+        android:text="user id"
         android:textColor="@color/black"
         />
 
@@ -27,7 +27,7 @@
         android:id="@+id/date_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="8/7/2023"
+        android:text="post id"
         android:textColor="@color/purple_500"
         />
 
@@ -36,8 +36,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="17dp"
-        android:text="This is my post for this day"
+        android:text="title"
        />
+
+    <TextView
+        android:id="@+id/body_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="body body body body body body"
+        />
 
     <Button
         android:id="@+id/details_button"

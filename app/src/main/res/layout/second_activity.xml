@@ -8,16 +8,21 @@
     android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/welcome_tv"
+    <EditText
+        android:id="@+id/userid_et"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:hint="Enter user id"
+        android:inputType="number"/>
+
+
+    <Button
+        android:id="@+id/viewPost_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:text ="Welcome Mohamed"
+        android:text="View Post"
         />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
