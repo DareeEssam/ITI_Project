@@ -1,7 +1,9 @@
+package com.example.iti_project
+
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
-import com.example.iti_project.R
+
 
 class ThirdActivity : AppCompatActivity() {
 

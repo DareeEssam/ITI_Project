@@ -43,16 +43,7 @@
         android:text="UserName"
         />
 
-    <TextView
-        android:id="@+id/email_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Email"
-        android:layout_marginStart="50dp"
-        app:layout_constraintTop_toBottomOf="@id/username_tv"
-        tools:layout_editor_absoluteX="20dp"
-        />
+
 
 
     <TextView
@@ -62,15 +53,15 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="50dp"
         android:text="Password"
-        app:layout_constraintTop_toBottomOf="@id/email_tv"
+        app:layout_constraintTop_toBottomOf="@id/username_tv"
         tools:layout_editor_absoluteX="20dp"
         />
 
 
     <EditText
         android:id="@+id/username_et"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,30 +69,22 @@
         app:layout_constraintTop_toTopOf="@id/username_tv"
         app:layout_constraintBottom_toBottomOf="@id/username_tv"
         android:hint="Enter your name"
+        android:text="kminchelle"
 
 
         />
 
-    <EditText
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/email_tv"
-        app:layout_constraintTop_toTopOf="@id/email_tv"
-        app:layout_constraintBottom_toBottomOf="@id/email_tv"
-        android:hint="Enter your email"
-        android:layout_marginStart="20dp"
-        />
 
     <EditText
         android:id="@+id/password_et"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/password_tv"
         app:layout_constraintTop_toTopOf="@id/password_tv"
         app:layout_constraintBottom_toBottomOf="@id/password_tv"
         android:hint="Enter password"
+        android:text="0lelplR"
         android:layout_marginStart="20dp"
         />
 

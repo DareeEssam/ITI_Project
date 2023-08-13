@@ -21,9 +21,10 @@ class CommentsAdapter(private val commentsList: List<Comment>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentComment = commentsList[position]
 
-        holder.binding.commentTextview.text =commentsList[position].body
+        val currentPost =commentsList[position]
+        val context = holder.binding.root.context
+
 
     }
 }
