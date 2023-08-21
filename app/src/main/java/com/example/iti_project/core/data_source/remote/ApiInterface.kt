@@ -1,10 +1,9 @@
-package com.example.iti_project.utils
+package com.example.iti_project.core.data_source.remote
 
-import android.security.identity.AccessControlProfileId
-import com.example.iti_project.model.Comment
-import com.example.iti_project.model.LoginBodyRequest
-import com.example.iti_project.model.Post
-import com.example.iti_project.model.UserResponse
+import com.example.iti_project.core.model.Comment
+import com.example.iti_project.core.model.body.LoginBodyRequest
+import com.example.iti_project.core.model.Post
+import com.example.iti_project.core.model.response.UserResponse
 import retrofit2.Response
 import retrofit2.http.*
 

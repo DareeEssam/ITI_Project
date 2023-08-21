@@ -1,29 +1,28 @@
-package com.example.iti_project
+package com.example.iti_project.ui.login
 
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.iti_project.R
+import com.example.iti_project.ui.second.SecondActivity
 import com.example.iti_project.databinding.ActivityMainBinding
-import com.example.iti_project.model.LoginBodyRequest
-import com.example.iti_project.utils.ApiInterface
-import com.example.iti_project.utils.RetrofitClient
-import retrofit2.Retrofit
+import com.example.iti_project.core.model.body.LoginBodyRequest
+import com.example.iti_project.core.data_source.remote.ApiInterface
+import com.example.iti_project.core.data_source.remote.RetrofitClient
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     lateinit var SharedPref: SharedPreferences
     lateinit var retrofit : ApiInterface
+    lateinit var viewModel: LoginViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,16 +30,23 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        viewModel = LoginViewModel()
+
 
         retrofit = RetrofitClient.getInstance("https://dummyjson.com/")
 
 
         SharedPref= applicationContext.getSharedPreferences("UserPref", MODE_PRIVATE)
 
+        viewModel.loginData.observe(this){
+            Toast.makeText(this,"Welcome ${it.body()?.firstName}" , Toast.LENGTH_LONG).show()
+        }
+
+
 
         binding.loginBt.setOnClickListener {
 
-            lifecycleScope.launchWhenCreated {
+           /* lifecycleScope.launchWhenCreated {
 
                 val body = LoginBodyRequest(binding.usernameEt.text.toString(),binding.passwordEt.text.toString())
 
@@ -49,12 +55,16 @@ class MainActivity : AppCompatActivity() {
                 if(response.isSuccessful){
                     moveToNextScreen()
                 }else{
-                    Toast.makeText(this@MainActivity,"Error",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@LoginActivity,"Error",Toast.LENGTH_LONG).show()
                 }
 
 
 
-            }
+            }*/
+            viewModel.startLogin(binding.usernameEt.text.toString(),binding.passwordEt.text.toString())
+
+
+
 
         }
     }

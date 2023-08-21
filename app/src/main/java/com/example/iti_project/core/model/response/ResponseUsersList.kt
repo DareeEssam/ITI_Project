@@ -1,5 +1,7 @@
-package com.example.iti_project.model
+package com.example.iti_project.core.model.response
 
+import com.example.iti_project.core.model.Support
+import com.example.iti_project.core.model.Users
 import com.google.gson.annotations.SerializedName
 
 data class ResponseUsersList(

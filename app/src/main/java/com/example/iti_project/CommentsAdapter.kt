@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.iti_project.databinding.CommentItemBinding
-import com.example.iti_project.model.Comment
+import com.example.iti_project.core.model.Comment
 
 class CommentsAdapter(private val commentsList: List<Comment>) :
     RecyclerView.Adapter<CommentsAdapter.ViewHolder>() {

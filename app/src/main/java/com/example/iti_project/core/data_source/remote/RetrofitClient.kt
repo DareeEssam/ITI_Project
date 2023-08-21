@@ -1,4 +1,4 @@
-package com.example.iti_project.utils
+package com.example.iti_project.core.data_source.remote
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

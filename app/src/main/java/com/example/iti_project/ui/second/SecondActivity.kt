@@ -1,4 +1,4 @@
-package com.example.iti_project
+package com.example.iti_project.ui.second
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -7,18 +7,16 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.iti_project.CustomAdapter
 import com.example.iti_project.FourthActivity
-import com.example.iti_project.MainActivity
 import com.example.iti_project.MyCustomClickListener
 import com.example.iti_project.R
 import com.example.iti_project.databinding.SecondActivityBinding
-import com.example.iti_project.model.LoginBodyRequest
-import com.example.iti_project.model.Post
-import com.example.iti_project.utils.ApiInterface
-import com.example.iti_project.utils.RetrofitClient
+import com.example.iti_project.core.model.Post
+import com.example.iti_project.core.data_source.remote.ApiInterface
+import com.example.iti_project.core.data_source.remote.RetrofitClient
+import com.example.iti_project.ui.login.LoginActivity
 
 class SecondActivity : AppCompatActivity(), MyCustomClickListener {
 
@@ -46,7 +44,6 @@ class SecondActivity : AppCompatActivity(), MyCustomClickListener {
         postsAdapter = CustomAdapter(postsList, this)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
-        
 
     }
 
@@ -62,7 +59,7 @@ class SecondActivity : AppCompatActivity(), MyCustomClickListener {
                 val editor = SharedPref.edit()
                 editor.putBoolean("LOGIN",false)
                 editor.commit()
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
 
                 finish()
                 true
